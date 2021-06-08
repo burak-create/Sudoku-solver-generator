@@ -14,6 +14,7 @@ test_board = [
         [0, 9, 0, 0, 0, 0, 0, 5, 0]
         ]
 """
+
 number_list = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 # An empty 2D array to generate sudoku puzzle
