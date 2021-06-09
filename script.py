@@ -1,5 +1,5 @@
 import numpy as np
-from random import choice, shuffle
+from random import randint, shuffle
 import sys
 """
 test_board = [
@@ -38,6 +38,7 @@ def poss(colm, row, value):
 
 # A recursive/backtracking function to generate a 9x9 sudoku puzzle
 def generate():
+    # Find the empty boxes and fill them with the possible numbers
     for colm in range(9):
         for row in range(9):
             if board[colm][row] == 0:
@@ -48,17 +49,39 @@ def generate():
                         generate()
                         board[colm][row] = 0
                 return
+    game_mode()
+
+def remover(remove):
+    while remove >= 0:
+        remove -= 1
+        print(remove)
+        row = randint(0, 8)
+        colm = randint(0, 8)
+        while board[row][colm] == 0:
+            row = randint(0, 8)
+            colm = randint(0, 8)
+        board[row][colm] = 0
+    printer()
+
+def printer():
     print(np.matrix(board))
-    input("done?")
+    sys.exit()
 
-
-"""
+# E = 20 
+# M = 30
+# H = 40
+# Expert = 50
 def game_mode():
-    # E = 20 
-    # M = 30
-    # H = 40
-    # Expert = 50
-"""
+    if val == "1" or val == "easy":
+        remover(20)
+    elif val == "2" or val == "medium":
+        remover(30)
+    elif val == "3" or val == "hard":
+        remover(40)
+    elif val == "4" or val == "expert":
+        remover(50)
+
+
 
 """
 # A recursive/backtracking function to solve a 9x9 sudoku puzzle
@@ -73,10 +96,11 @@ def solve():
                         board[colm][row] = 0
                 return
     print(np.matrix(board))
-    """
+"""
 
 # A function for take user input for game difficulty
 def choice():
+    global val
     print("\n\nWelcome to Sudoku Generator!\n\n")
     start_the_game = input("Do you want to start the game?(y/n)\n\n").lower()
     if start_the_game == ("y"):
@@ -85,7 +109,7 @@ def choice():
         2) Medium
         3) Hard
         4) Expert\n\n
-""")
+""").lower()
         if int(val) >= 1 and int(val) < 5:
             empty_grid()
         else:
@@ -96,5 +120,6 @@ def choice():
 
 
 if __name__ == '__main__':
+    remove = 0
     choice()
     
