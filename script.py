@@ -51,8 +51,10 @@ def generate():
                 return
     game_mode()
 
+# Removes random rows and columns from the ful filled grid
+# Create a rule to left min 3 numbers for a square ---
 def remover(remove):
-    while remove >= 0:
+    while remove > 0:
         remove -= 1
         print(remove)
         row = randint(0, 8)
