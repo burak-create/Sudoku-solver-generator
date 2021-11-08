@@ -130,7 +130,7 @@ def solve(grid, i, j):
 def instruction():
     text1 = font2.render("PRESS D TO RESET TO DEFAULT / R TO EMPTY", 1, (0, 0, 0))
     text2 = font2.render("ENTER VALUES AND PRESS ENTER TO VISUALIZE", 1, (0, 0, 0))
-    screen.blit(text1, (20, 520))       
+    screen.blit(text1, (20, 520))
     screen.blit(text2, (20, 540))
  
 # Display options when solved
