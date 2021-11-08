@@ -9,7 +9,7 @@ A simple script to solve/generate sudoku puzzles
 - Have fun!
 
 ## Bugs need to fixes(to do)
-- infinitve board
+- infinitive board
 - Error messages
 - difficulty levels (ie Beginner, Talented, Skilled)
 - Generate your own puzzle
