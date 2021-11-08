@@ -8,5 +8,8 @@ A simple script to solve/generate sudoku puzzles
 - At the end you can reset board to default with d or clear entire board with r
 - Have fun!
 
-## Bugs need to fixes
--
+## Bugs need to fixes(to do)
+- infinitve board
+- Error messages
+- difficulty levels (ie Beginner, Talented, Skilled)
+- Generate your own puzzle
