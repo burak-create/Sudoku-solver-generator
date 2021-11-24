@@ -3,8 +3,6 @@ import pygame
 pygame.font.init()
 screen = pygame.display.set_mode((500, 600))
 pygame.display.set_caption("SUDOKU v1.3")
-# img = pygame.image.load('icon.png')
-# pygame.display.set_icon(img)
  
 x = 0
 y = 0
